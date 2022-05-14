@@ -1,0 +1,28 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Модульний контроль №1
+    </ion-title>
+  </ion-toolbar>
+  <ion-toolbar>
+    <ion-title>
+      Виконала студентка групи КН-31 Ківачук Інна
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <ion-card-header>
+      <ion-title size="large">Завдання</ion-title>
+      <p>
+        Для учеників середньої школи необхідно розробити застосування для вивчення геометрії та планіметрії. Для трьовимірних тіл необхідно розраховувати площину та об‘єм для двовимірних площину та периметр та для тих для яких це можливо радіус вписаної та описаної окружностей. Тривимірні тіла – циліндр, шар, конус двовимірні - квадрат.  Створити поліморфний контейнер для їх виведення( як мінімум 5 елемента). Результати розрахунків необхідно виводити на екран.
+      </p>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-input type="number" value="5" #Inputn></ion-input>
+      <ion-button (click)="ras(Inputn.value)">Розрахунок</ion-button>
+      <p *ngFor="let figure of figures">{{figure.show()}}</p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
